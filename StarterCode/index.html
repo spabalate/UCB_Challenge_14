@@ -50,10 +50,10 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <!-- Include separate JS file -->
-  <script src="/MY_UC_BERK/CHALLENGES/CHALLENGE_14/StarterCode/static/js/app.js"></script>
+  <script src="static/js/app.js"></script>
   <!-- D3 script for fetching JSON data -->
   <script>
-    d3.json("/MY_UC_BERK/CHALLENGES/CHALLENGE_14/StarterCode/samples.json")
+    d3.json("samples.json")
       .then(function(data) {
         var dropdownMenu = d3.select("#selDataset");
         data.names.forEach(function(sample) {

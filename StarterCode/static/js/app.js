@@ -1,6 +1,6 @@
 // Function to handle dropdown menu change
 function optionChanged(selectedSample) {
-    d3.json("/MY_UC_BERK/CHALLENGES/CHALLENGE_14/StarterCode/samples.json").then(function(data) {
+    d3.json("samples.json").then(function(data) {
         // Find the index of the selectedSample in the names array
         var selectedIndex = data.names.indexOf(selectedSample);
 
@@ -125,7 +125,7 @@ function updateGaugeChart(selectedData) {
 }
 
 // Initial data loading and chart rendering
-d3.json("/MY_UC_BERK/CHALLENGES/CHALLENGE_14/StarterCode/samples.json").then(function(data) {
+d3.json("samples.json").then(function(data) {
     var dropdownMenu = d3.select("#selDataset");
     data.names.forEach(function(sample) {
         dropdownMenu.append("option").text(sample).property("value", sample);
